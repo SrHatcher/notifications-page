@@ -85,6 +85,7 @@ header{
 }
 .header__button{
     font-size: 1.4rem;
+    font-weight: 700;
 
     background-color: transparent;
     border: none;
@@ -142,7 +143,7 @@ header{
     text-decoration: none;
     font-weight: 800;
 
-    color: var(--blue);
+    color: var(--dark-grayish-blue);
 }
 .text__link--old{
     text-decoration: none;
@@ -169,6 +170,9 @@ header{
     grid-area: related;
 
     width: 4rem;
+    height: 4rem;
+
+    cursor: pointer;
 }
 .content__message{
     grid-area: message;
@@ -180,7 +184,46 @@ header{
     cursor: pointer;
 }
 
+@media screen and (min-width: 800px){
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        
+
+        background-color: var(--very-light-grayish-blue);
+    }
+    main{
+        min-height: 50rem;
+        width: 100%;
+        max-width: 73rem;
+        height: 79rem;
+        padding: 2rem 3rem;
+    } 
+    .content__message{
+        padding: 1rem 2rem;
+    
+        border:  solid 0.1rem var(--light-grayish-blue-2);
+        border-radius: 0.5rem;
+        cursor: pointer;
+    }
+}
+
 @media (hover:hover) {
+    .header__button:hover{
+        color: var(--blue);
+    }
+    .text__name a:hover{
+        color: var(--blue);
+    }
+    .text__link:hover{    
+        color: var(--blue);
+    }
+    .content__image:hover{
+        border-radius: 0.8rem;
+        box-shadow: 0 0 0rem 0.5rem var(--very-light-grayish-blue);
+    }
     .content__message:hover{
         background-color: var(--light-grayish-blue-1);
     }

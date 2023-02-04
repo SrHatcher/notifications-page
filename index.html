@@ -15,7 +15,7 @@
   <main>
     <header>
       <h1 class="header__title">Notifications <span class="header__amount">3</span></h1>
-      <button class="header__button">Mark all as read</button>
+      <button class="header__button" onclick="setNotificationsState()">Mark all as read</button>
     </header>
     <article class="main__notifications notification">
       <section class="notification__container">
@@ -25,7 +25,7 @@
 
         <div class="notification__content">
           <div class="content__text">
-            <p class="text__reason"><strong class="text__name"><a href="#">Mark Webber</a></strong> reacted to your recent post <a href="#" class="text__link">My first tournament today</a>!<span class="text__status">new</span></p>
+            <p class="text__reason"><strong class="text__name"><a href="#">Mark Webber</a></strong> reacted to your recent post <a href="#" class="text__link">My first tournament today!</a><span class="text__status"></span></p>
             <p class="text__date">1m ago</p>
           </div>
           <div class="content__image">
@@ -35,11 +35,12 @@
             Hello, Thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.
           </div>
         </div>
-        
-        
       </section>
     </article>
   </main>
+
+  <script src="./data.js"></script>
+  <script src="./index.js"></script>
    
 </body>
 </html>

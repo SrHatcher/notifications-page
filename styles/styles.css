@@ -39,14 +39,9 @@ html{
 
 body{
     font-family: var(--font);
-    font-size: 1.6rem;
+    font-size: 1.5rem;
 }
 main{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -106,30 +101,87 @@ header{
     grid-template-columns: 15% 85% ;
     grid-template-rows: auto;
     grid-template-areas: 'pfp content';
+    gap: 0.5rem;
+
+    padding: 1.5rem 1.5rem;
+
+    background-color: var(--very-light-grayish-blue);
+}
+
+.notification__container--old{
+    background-color:  transparent;
 }
 .notification__image{
     grid-area: pfp;
+    width: 4rem;
+    height: 4rem;
 }
 .notification__content{
     grid-area: content;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto minmax(0rem, 4rem);
     grid-template-rows: auto auto;
     grid-template-areas: 'text related'
                         'message message';
+    column-gap: 2rem;
+    row-gap: 0.8rem;
 }
 .content__text{
     grid-area: text;
 }
 .text__reason{
+    color: var(--dark-grayish-blue);
 }
-.text__name{}
-.text__link{}
-.text__status{}
-.text__date{}
+.text__name a{
+    text-decoration: none;
+    font-weight: 800;
+
+    color: var(--very-dark-blue);
+}
+.text__link{
+    text-decoration: none;
+    font-weight: 800;
+
+    color: var(--blue);
+}
+.text__link--old{
+    text-decoration: none;
+    font-weight: 800;
+
+    color: var(--dark-grayish-blue);
+}
+.text__status{
+    display: inline-block;
+
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-inline-start: 0.5rem;
+
+    border-radius: 50%;
+    background-color: var(--red);
+}
+.text__date{
+    font-weight: 500;
+
+    color: var(--grayish-blue);
+}
 .content__image{
     grid-area: related;
+
+    width: 4rem;
 }
 .content__message{
     grid-area: message;
+
+    padding: 1rem 0.6rem;
+
+    border:  solid 0.1rem var(--light-grayish-blue-2);
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+@media (hover:hover) {
+    .content__message:hover{
+        background-color: var(--light-grayish-blue-1);
+    }
 }

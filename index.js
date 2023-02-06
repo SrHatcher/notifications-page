@@ -38,7 +38,9 @@ function loadNotifications(){
         textReason.classList.add('text__reason')
         textName.classList.add('text__name')
         nameLink.setAttribute('href', "#")
+        nameLink.setAttribute('aria-label', 'link to profile')
         textLink.setAttribute('href', "#")
+        textLink.setAttribute('aria-label', 'link to post')
         
        
         textDate.classList.add('text__date')

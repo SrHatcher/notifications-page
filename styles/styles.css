@@ -220,6 +220,9 @@ header{
     .text__link:hover{    
         color: var(--blue);
     }
+    .text__link--old:hover{
+        color: var(--blue);
+    }
     .content__image:hover{
         border-radius: 0.8rem;
         box-shadow: 0 0 0rem 0.5rem var(--very-light-grayish-blue);

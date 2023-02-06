@@ -184,6 +184,33 @@ header{
     cursor: pointer;
 }
 
+.header_title__loading_skeleton{
+    height: 3rem;
+    width: 16rem;
+
+    border-radius: 0.8rem;
+    background-color: var(--light-grayish-blue-2);
+    animation: loading-skeleton infinite 1.5s;
+}
+
+.notification__loading_sekeleton{
+    height: 7.5rem;
+
+    border-radius: 0.8rem;
+    background: var(--light-grayish-blue-2);
+    animation: loading-skeleton infinite 1.5s;
+}
+
+
+@keyframes loading-skeleton {
+    0% , 100%{
+      opacity: 100%;
+    } 
+    50%{
+      opacity: 0%;
+    }
+  }
+
 @media screen and (min-width: 800px){
     body{
         display: flex;
